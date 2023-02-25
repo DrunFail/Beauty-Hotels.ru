@@ -1,0 +1,87 @@
+.info-card-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    max-width: 1110px;
+    margin: 0 auto;
+    padding-block: 100px 133px;
+    justify-items: center;
+
+    .info-card-list-item {
+        max-width: 540px;
+        width: 100%;
+        min-block-size: 212px;
+        background-color: var(--clr-green);
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: 'title img' 'text img' 'elem img';
+        padding-inline: 7.4074% 8.3333%;
+        padding-block: 1.7rem 6.4814%;
+        row-gap: 11.7924%;
+        align-items: center;
+
+        &, & > a {
+            color: var(--clr-white);
+        }
+
+        & > h2 {
+            grid-area: title;
+            font-size: var(--fs-525);
+            font-weight: 700;
+            line-height: 1.1666;
+        }
+
+        & > p {
+            grid-area: text;
+            line-height: 1.4285;
+        }
+
+        & > input, & > a {
+            grid-area: elem;
+            height: 35px;
+            border-radius: 30px;
+        }
+
+        & > input {
+            width: 225px;
+            padding-inline-start: 25px;
+            border: none;
+
+            &::placeholder {
+                color: var(--clr-light-gray);
+            }
+        }
+
+        & > a {
+            width: 170px;
+            border: 2px solid var(--clr-white);
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            line-height: 16px;
+
+            &:hover, &:focus {
+                background-color: var(--clr-white);
+                color: var(--clr-green);
+            }
+        }
+
+        & > img {
+            grid-area: img;
+            justify-self: flex-end;
+            max-inline-size: 100%;
+            block-size: auto;
+        }
+    }
+}
+@media (max-width: 50em){
+    .info-card-list{
+        padding:4rem .5rem;
+        
+
+        .info-card-list-item{
+            padding:1rem .5rem;
+        }
+    }
+}

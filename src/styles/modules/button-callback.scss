@@ -1,0 +1,18 @@
+@mixin button {
+    width: 170px;
+    padding-block: 10px;
+    padding-inline: 24.5px;
+    border: 2px solid var(--clr-green);
+    border-radius: 40px;
+    color: var(--clr-black);
+    line-height: 1.142857;
+    font-size: var(--fs-400);
+    cursor: pointer;
+    transition: background-color, color 0.3s ease;
+
+    &:hover, &:focus {
+        background-color: var(--clr-green);
+        color: var(--clr-white);
+        transition: background-color, color 0.3s ease;
+    }
+}

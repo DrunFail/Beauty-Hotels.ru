@@ -1,0 +1,90 @@
+.product-list {
+    display: grid;
+    max-width: var(--maxw);
+    row-gap: 8.8372%;
+    margin-inline: auto;
+    padding-block: 5rem 2.3rem;
+
+
+    & > h2 {
+        grid-column: 1/-1;
+        font-size: var(--fs-600);
+        line-height: 1.1666;
+        font-weight: 700;
+    }
+
+    .product-list-item-wrapper {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(180px,1fr));
+        align-content: center;
+        grid-gap: 2.7027%;
+
+        .product-list-item {
+            max-inline-size: 255px;
+            block-size: auto;
+            aspect-ratio: 255/363;
+            background-color: var(--clr-white);
+            display: grid;
+            grid-template-rows: 53.0351% repeat(3, max-content);
+            justify-items: center;
+            padding-block: 9.8039%;
+            padding-inline: 11.7647%;
+            row-gap: 5.5096%;
+
+            & > img {
+                max-block-size: 100%;
+                inline-size: auto;
+                aspect-ratio: 125/166;
+            }
+
+            & > p {
+                text-align: center;
+                line-height: 20px;
+            }
+
+            .product-list-item-price {
+                font-size: var(--fs-550);
+                line-height: 1.1904;
+                font-weight: 500;
+            }
+
+            & > button {
+                width: 130px;
+                height: 35px;
+                border-radius: 30px;
+                background-color: var(--clr-green);
+                color: var(--clr-white);
+                text-transform: capitalize;
+                border: none;
+                cursor: pointer;
+
+                &:hover, &:focus {
+                    background-color: var(--clr-white);
+                    color: var(--clr-green);
+                    border: 1px solid var(--clr-green);
+                    font-size: var(--fs-500);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 50em){
+    .product-list {
+        padding-inline: .5rem;
+        padding-block-start: 2rem;
+        row-gap: 2rem;
+
+
+        .product-list-item-wrapper {
+            grid-template-columns: repeat(2,1fr);
+            justify-items: center;
+
+            .product-list-item {
+                padding:1rem 0 2rem;
+                
+                width: 100%;
+            }
+        }
+    }
+}

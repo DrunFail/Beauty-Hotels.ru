@@ -1,0 +1,32 @@
+@import '_reset';
+@import '_colors';
+@import '_typography';
+@import './modules';
+
+:root{
+   
+    @each $color, $value in $colors {
+        --clr-#{$color}: #{$value};
+    }
+
+    @each $font, $value in $fonts{
+        --ff-#{$font}: #{$value};
+    }
+
+    @each $fontsize, $value in $fontsizes{
+        --fs-#{$fontsize}: #{$value};
+    }
+
+    --maxw:1110px;
+}
+
+body{
+    background-color: var(--clr-gray);
+}
+
+@media (max-width: 50em) {
+    :root{
+
+    }
+
+}
